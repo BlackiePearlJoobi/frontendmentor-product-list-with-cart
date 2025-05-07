@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("assets/fonts/RedHatText-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 700;
+}
+
+:root {
+  --font-primary: "Red Hat Text", sans-serif;
+  font-size: 14px;
+
+  --font-size-bold-40: 40px;
+  --font-weight-bold-40: 700;
+  --line-height-bold-40: 120%;
+
+  --font-size-bold-24: 24px;
+  --font-weight-bold-24: 700;
+  --line-height-bold-24: 125%;
+
+  --font-size-semi-bold-16: 16px;
+  --font-weight-semi-bold-16: 600;
+  --line-height-semi-bold-16: 150%;
+
+  --font-size-regular-14: 14px;
+  --font-weight-regular-14: 400;
+  --line-height-regular-14: 150%;
+
+  --font-size-semi-bold-14: 14px;
+  --font-weight-semi-bold-14: 600;
+  --line-height-semi-bold-14: 150%;
+
+  --red: #c73b0f;
+  --rose-900: #260f08;
+  --rose-500: #87635a;
+  --rose-400: #ad8a85;
+  --rose-300: #caafa7;
+  --rose-100: #f5eeec;
+  --rose-50: #fcf8f6;
+  --green: #1ea575;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid rgb(200, 200, 200); */
+}
+
+body {
+  font-family: var(--font-primary);
+  max-width: 100%; /* Prevents overflow */
+  place-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up the full viewport height */
+  background-color: var(--rose-50);
+}
+
+main {
+  flex: 1;
+  margin: 24px;
+}
+
+h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-bold-40);
+  font-weight: var(--font-weight-bold-40);
+  line-height: var(--line-height-bold-40);
+  color: var(--rose-900);
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.img-btn-container {
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 327px;
+    max-height: 212px;
+    border-radius: 0.5rem;
+
+    &[class="selected"] {
+      border: 2.5px solid var(--red);
+    }
+  }
+}
+
+.item-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .category {
+    font-size: var(--font-size-regular-14);
+    font-weight: var(--font-weight-regular-14);
+    line-height: var(--line-height-regular-14);
+    color: var(--rose-500);
+  }
+
+  .item-name {
+    font-size: var(--font-size-semi-bold-16);
+    font-weight: var(--font-weight-semi-bold-16);
+    line-height: var(--line-height-semi-bold-16);
+    color: var(--rose-900);
+  }
+
+  .price {
+    font-size: var(--font-size-semi-bold-16);
+    font-weight: var(--font-weight-semi-bold-16);
+    line-height: var(--line-height-semi-bold-16);
+    color: var(--red);
+  }
+}
+
+footer {
+  padding: 1rem;
+
+  .attribution {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(55, 65, 81);
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 641px) {
+  main {
+    margin: 40px;
+  }
+
+  .item-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 24px;
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin: 88px;
+  }
+}
