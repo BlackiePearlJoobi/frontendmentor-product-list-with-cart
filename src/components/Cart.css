@@ -46,7 +46,6 @@
           align-items: center;
 
           .name-amount-price-container {
-            width: 164px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -93,7 +92,7 @@
             cursor: pointer;
 
             &:hover {
-              content: url(src/assets/images/icon-remove-item-circle-selected.svg);
+              content: url(./frontendmentor-product-list-with-cart/src/assets/images/icon-remove-item-circle-selected.svg);
             }
           }
         }

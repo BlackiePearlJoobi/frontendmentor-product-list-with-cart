@@ -26,7 +26,7 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
       {totalAmount === 0 ? (
         <div className="empty-cart">
           <img
-            src="src/assets/images/illustration-empty-cart.svg"
+            src="./frontendmentor-product-list-with-cart/src/assets/images/illustration-empty-cart.svg"
             alt="Empty cart"
           />
           <p>Your added items will appear here</p>
@@ -51,7 +51,7 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
                     </div>
                   </div>
                   <img
-                    src="src/assets/images/icon-remove-item-circle.svg"
+                    src="./frontendmentor-product-list-with-cart/src/assets/images/icon-remove-item-circle.svg"
                     alt="item remove icon"
                     role="button"
                     onClick={() => deleteItem(product.id)}
@@ -67,7 +67,7 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
           </section>
           <div className="carbon-neutral-statement">
             <img
-              src="src/assets/images/icon-carbon-neutral.svg"
+              src="./frontendmentor-product-list-with-cart/src/assets/images/icon-carbon-neutral.svg"
               alt="carbon neutral sign"
             />
             <p>

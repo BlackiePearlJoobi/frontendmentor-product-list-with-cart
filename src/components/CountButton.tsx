@@ -72,7 +72,7 @@ const CountButton: React.FC<ButtonProps> = ({
   ) : (
     <div className="add-to-cart-btn is-clicked" role="button">
       <img
-        src="src/assets/images/icon-decrement-quantity.svg"
+        src="./frontendmentor-product-list-with-cart/src/assets/images/icon-decrement-quantity.svg"
         alt="Decrement counter"
         className="decrement-btn"
         role="button"
@@ -80,7 +80,7 @@ const CountButton: React.FC<ButtonProps> = ({
       />
       <span>{count}</span>
       <img
-        src="src/assets/images/icon-increment-quantity.svg"
+        src="./frontendmentor-product-list-with-cart/src/assets/images/icon-increment-quantity.svg"
         alt="Increment counter"
         className="increment-btn"
         role="button"

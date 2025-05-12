@@ -7,11 +7,11 @@
     cursor: pointer;
 
     &[class="decrement-btn"]:hover {
-      content: url("src/assets/images/icon-decrement-quantity-inverted.svg");
+      content: url("./frontendmentor-product-list-with-cart/src/assets/images/icon-decrement-quantity-inverted.svg");
     }
 
     &[class="increment-btn"]:hover {
-      content: url("src/assets/images/icon-increment-quantity-inverted.svg");
+      content: url("./frontendmentor-product-list-with-cart/src/assets/images/icon-increment-quantity-inverted.svg");
     }
   }
 

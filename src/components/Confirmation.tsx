@@ -36,7 +36,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({
     <div className="modal">
       <div className="modal-content">
         <img
-          src="src/assets/images/icon-order-confirmed.svg"
+          src="./frontendmentor-product-list-with-cart/src/assets/images/icon-order-confirmed.svg"
           alt="Confirm icon"
         />
         <h1>Order Confirmed</h1>
@@ -56,8 +56,8 @@ const Confirmation: React.FC<ConfirmationProps> = ({
                   <div className="name-amount-price-container">
                     <h4 className="item-name">{product.name}</h4>
                     <div className="amount-price-container">
-                      <p className="amount">{product.amount}x</p>
-                      <p className="unit-price">@ {product.price}</p>
+                      <span className="amount">{product.amount}x</span>
+                      <span className="unit-price">@ {product.price}</span>
                     </div>
                   </div>
                   <h3 className="total">
