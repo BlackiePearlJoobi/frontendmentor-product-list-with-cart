@@ -90,10 +90,6 @@
             width: 20px;
             height: 20px;
             cursor: pointer;
-
-            &:hover {
-              content: url(./frontendmentor-product-list-with-cart/src/assets/images/icon-remove-item-circle-selected.svg);
-            }
           }
         }
 

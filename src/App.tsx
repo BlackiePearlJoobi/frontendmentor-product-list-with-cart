@@ -28,6 +28,8 @@ function App() {
     }));
   }, [data]);
 
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <div className="wrapper">
       <main>
@@ -39,14 +41,17 @@ function App() {
                 <div className="img-btn-container">
                   <picture>
                     <source
-                      srcSet={product.image.tablet}
+                      srcSet={`${basePath}${product.image.tablet}`}
                       media="(min-width: 641px)"
                     />
                     <source
-                      srcSet={product.image.desktop}
+                      srcSet={`${basePath}${product.image.desktop}`}
                       media="(min-width: 1025px)"
                     />
-                    <img src={product.image.mobile} alt={product.name} />
+                    <img
+                      src={`${basePath}${product.image.mobile}`}
+                      alt={product.name}
+                    />
                   </picture>
                   <AddToCartButton
                     productId={product.id}

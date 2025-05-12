@@ -50,7 +50,7 @@ const AddToCartButton: React.FC<ButtonProps> = ({
   ) : (
     <button className="add-to-cart-btn is-not-clicked" onClick={startCount}>
       <img
-        src="./frontendmentor-product-list-with-cart/src/assets/images/icon-add-to-cart.svg"
+        src={`${import.meta.env.BASE_URL}/assets/images/icon-add-to-cart.svg`}
         alt="Shopping cart icon"
       />
       Add to Cart

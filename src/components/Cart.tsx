@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useCart } from "../CartContext";
 import "./Cart.css";
 
@@ -7,6 +8,7 @@ interface CartProps {
 
 const Cart = ({ onConfirmOrder }: CartProps) => {
   const { cartItems, updateCart } = useCart();
+  const [isHovered, setIsHovered] = useState(false);
 
   let totalAmount = 0;
   let totalPrice = 0;
@@ -26,7 +28,7 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
       {totalAmount === 0 ? (
         <div className="empty-cart">
           <img
-            src="./frontendmentor-product-list-with-cart/src/assets/images/illustration-empty-cart.svg"
+            src={`${import.meta.env.BASE_URL}/assets/images/illustration-empty-cart.svg`}
             alt="Empty cart"
           />
           <p>Your added items will appear here</p>
@@ -51,10 +53,16 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
                     </div>
                   </div>
                   <img
-                    src="./frontendmentor-product-list-with-cart/src/assets/images/icon-remove-item-circle.svg"
+                    src={`${import.meta.env.BASE_URL}/assets/images/${
+                      isHovered
+                        ? "icon-remove-item-circle-selected.svg"
+                        : "icon-remove-item-circle.svg"
+                    }`}
                     alt="item remove icon"
                     role="button"
                     onClick={() => deleteItem(product.id)}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                   />
                 </article>
                 <hr></hr>
@@ -67,7 +75,7 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
           </section>
           <div className="carbon-neutral-statement">
             <img
-              src="./frontendmentor-product-list-with-cart/src/assets/images/icon-carbon-neutral.svg"
+              src={`${import.meta.env.BASE_URL}/assets/images/icon-carbon-neutral.svg`}
               alt="carbon neutral sign"
             />
             <p>

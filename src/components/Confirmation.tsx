@@ -36,7 +36,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({
     <div className="modal">
       <div className="modal-content">
         <img
-          src="./frontendmentor-product-list-with-cart/src/assets/images/icon-order-confirmed.svg"
+          src={`${import.meta.env.BASE_URL}/assets/images/icon-order-confirmed.svg`}
           alt="Confirm icon"
         />
         <h1>Order Confirmed</h1>
@@ -46,11 +46,12 @@ const Confirmation: React.FC<ConfirmationProps> = ({
             const productDetails = productList.find(
               (item) => item.name === product.name,
             );
+            const basePath = import.meta.env.BASE_URL;
             return (
               <div className="item-hr-container" key={product.id}>
                 <article className="cart-item">
                   <img
-                    src={productDetails?.image.thumbnail || ""}
+                    src={`${basePath}${productDetails?.image.thumbnail}` || ""}
                     alt={product.name}
                   />
                   <div className="name-amount-price-container">

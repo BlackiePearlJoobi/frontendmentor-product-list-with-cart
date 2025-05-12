@@ -18,6 +18,8 @@ const CountButton: React.FC<ButtonProps> = ({
 }) => {
   const { cartItems, updateCart } = useCart();
   const [count, setCount] = useState(cartItems[productId]?.amount || 1);
+  const [minusIsHovered, setMinusIsHovered] = useState(false);
+  const [plusIsHovered, setPlusIsHovered] = useState(false);
 
   useEffect(() => {
     if (!cartItems[productId]) {
@@ -72,19 +74,31 @@ const CountButton: React.FC<ButtonProps> = ({
   ) : (
     <div className="add-to-cart-btn is-clicked" role="button">
       <img
-        src="./frontendmentor-product-list-with-cart/src/assets/images/icon-decrement-quantity.svg"
+        src={`${import.meta.env.BASE_URL}/assets/images/${
+          minusIsHovered
+            ? "icon-decrement-quantity-inverted.svg"
+            : "icon-decrement-quantity.svg"
+        }`}
         alt="Decrement counter"
         className="decrement-btn"
         role="button"
         onClick={removeItem}
+        onMouseEnter={() => setMinusIsHovered(true)}
+        onMouseLeave={() => setMinusIsHovered(false)}
       />
       <span>{count}</span>
       <img
-        src="./frontendmentor-product-list-with-cart/src/assets/images/icon-increment-quantity.svg"
+        src={`${import.meta.env.BASE_URL}/assets/images/${
+          plusIsHovered
+            ? "icon-increment-quantity-inverted.svg"
+            : "icon-increment-quantity.svg"
+        }`}
         alt="Increment counter"
         className="increment-btn"
         role="button"
         onClick={addItem}
+        onMouseEnter={() => setPlusIsHovered(true)}
+        onMouseLeave={() => setPlusIsHovered(false)}
       />
     </div>
   );

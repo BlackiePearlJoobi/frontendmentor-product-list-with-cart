@@ -163,4 +163,15 @@ footer {
     gap: 32px;
     margin: 88px;
   }
+
+  article {
+    .img-btn-container {
+      picture {
+        img {
+          max-width: 250.67px;
+          max-height: 240px;
+        }
+      }
+    }
+  }
 }
