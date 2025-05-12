@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# 🛒 E-Commerce Cart System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
 
-Currently, two official plugins are available:
+This project is an interactive e-commerce cart system that allows users to add, update, and confirm orders seamlessly. Built with React & TypeScript, it provides a dynamic shopping experience with real-time updates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+✅ Add items to the cart
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Adjust item quantities dynamically
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+✅ Remove items from the cart
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✅ Confirm orders with a modal summary
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✅ Responsive design for mobile, tablet, and desktop
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠️ Tech Stack
+
+- Frontend: React, TypeScript
+
+- State Management: React Context API
+
+- Styling: Component-level CSS
+
+- Unique IDs: UUID for product identification
+
+## 📂 Project Structure
+
+- **public/**
+  - **assets/** → Images & icons
+- **src/** → Main source code
+  - **assets/** → Fonts
+  - **components/** → UI components (AddToCartButton, CountButton, Cart, Confirmation modal) and styles
+  - **context/** → CartContext.tsx for state management
+  - **data/** → Product list data
+  - **App.tsx** → Main application component
+  - **index.css** → Global styles
+  - **main.tsx** → React Entry Point
+- **index.html** → Entry point for the webpage
+
+## 🔧 Installation & Setup
+
+1️⃣ Clone the repository:
+bash
+git clone https://github.com/BlackiePearlJoobi/frontendmentor-product-list-with-cart.git
+
+2️⃣ Navigate to the project folder:
+bash
+cd frontendmentor-product-list-with-cart
+
+3️⃣ Install dependencies:
+bash
+npm install
+
+4️⃣ Start the development server:
+bash
+npm run dev
+
+## 📌 Future Improvements
+
+✅ Implement unit tests
+
+✅ Enhance UI with animations
+
+## 🤝 Contributing
+
+Feel free to fork this repository and submit pull requests!
+
+## 📜 License
+
+This project is designed by Frontend Mentor.
