@@ -1,33 +1,42 @@
-🛒 E-Commerce Cart System
+# 🛒 E-Commerce Cart System
 
-📌 Overview
+## 📌 Overview
 This project is an interactive e-commerce cart system that allows users to add, update, and confirm orders seamlessly. Built with React & TypeScript, it provides a dynamic shopping experience with real-time updates.
 
-🚀 Features
+## 🚀 Features
 ✅ Add items to the cart
+
 ✅ Adjust item quantities dynamically
+
 ✅ Remove items from the cart
+
 ✅ Confirm orders with a modal summary
+
 ✅ Responsive design for mobile, tablet, and desktop
 
-🛠️ Tech Stack
-・Frontend: React, TypeScript
-・State Management: React Context API
-・Styling: Component-level CSS
-・Unique IDs: UUID for product identification
+## 🛠️ Tech Stack
+- Frontend: React, TypeScript
 
-📂 Project Structure
-/public
-├── assets/ # Images & icons
-/src
-├── assets/ # Fonts
-├── components/ # UI components (AddToCartButton, CountButton, Cart, Confirmation modal)
-├── context/ # CartContext.tsx for state management
-├── data/ # Product list data
-├── App.tsx # Main application component
-├── index.tsx # Entry point
+- State Management: React Context API
 
-🔧 Installation & Setup
+- Styling: Component-level CSS
+
+- Unique IDs: UUID for product identification
+
+## 📂 Project Structure
+- **public/**
+  - **assets/** → Images & icons
+- **src/** → Main source code
+  - **assets/** → Fonts
+  - **components/** → UI components (AddToCartButton, CountButton, Cart, Confirmation modal) and styles
+  - **context/** → CartContext.tsx for state management
+  - **data/** → Product list data
+  - **App.tsx** → Main application component
+  - **index.css** → Global styles
+  - **main.tsx** → React Entry Point
+- **index.html** → Entry point for the webpage
+
+## 🔧 Installation & Setup
 1️⃣ Clone the repository:
 bash
 git clone https://github.com/BlackiePearlJoobi/frontendmentor-product-list-with-cart.git
@@ -44,12 +53,13 @@ npm install
 bash
 npm run dev
 
-📌 Future Improvements
+## 📌 Future Improvements
 ✅ Implement unit tests
+
 ✅ Enhance UI with animations
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to fork this repository and submit pull requests!
 
-📜 License
+## 📜 License
 This project is designed by Frontend Mentor.
