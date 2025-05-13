@@ -16,14 +16,14 @@ const AddToCartButton: React.FC<ButtonProps> = ({
   category,
   price,
 }) => {
-  const { cartItems, updateCart } = useCart();
+  const { updateCart } = useCart();
   const [isClicked, setIsClicked] = useState(false);
   const incrementBtnRef = useRef<HTMLImageElement | null>(null);
 
   const startCount = () => {
     setIsClicked(true);
 
-    const existingItem = cartItems[productId] || {
+    const existingItem = {
       id: null,
       name: null,
       category: null,

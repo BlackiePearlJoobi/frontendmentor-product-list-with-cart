@@ -41,20 +41,8 @@ const CountButton: React.FC<ButtonProps> = ({
     const updatedAmount = count + 1;
     setCount(updatedAmount);
 
-    const existingItem = cartItems[productId] || {
-      id: null,
-      name: null,
-      category: null,
-      price: null,
-      amount: 0,
-    };
-
     updateCart(productId, {
-      ...existingItem,
-      id: productId,
-      name: name,
-      category: category,
-      price: price,
+      ...cartItems[productId],
       amount: updatedAmount,
     });
   };

@@ -24,7 +24,7 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
 
   return (
     <div className="cart-container">
-      <h2>Your Cart &#40;{totalAmount}&#41; </h2>
+      <h2>Your Cart &#40;{totalAmount}&#41;</h2>
       {totalAmount === 0 ? (
         <div className="empty-cart">
           <img
