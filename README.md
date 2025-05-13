@@ -16,6 +16,8 @@ This project is an interactive e-commerce cart system that allows users to add, 
 
 ✅ Responsive design for mobile, tablet, and desktop
 
+✅ Keyboard accessible
+
 ## 🛠️ Tech Stack
 
 - Frontend: React, TypeScript
@@ -59,6 +61,10 @@ bash
 npm run dev
 
 ## 📌 Future Improvements
+
+✅ Continuous focus to the Last Removed Item
+
+✅ Add ARIA live regions to notify users when items are added/removed
 
 ✅ Implement unit tests
 
