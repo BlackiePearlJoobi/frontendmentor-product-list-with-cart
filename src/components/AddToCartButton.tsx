@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useCart } from "../CartContext";
 import "./AddToCartButton.css";
 import CountButton from "./CountButton";
@@ -18,6 +18,7 @@ const AddToCartButton: React.FC<ButtonProps> = ({
 }) => {
   const { cartItems, updateCart } = useCart();
   const [isClicked, setIsClicked] = useState(false);
+  const incrementBtnRef = useRef<HTMLImageElement | null>(null);
 
   const startCount = () => {
     setIsClicked(true);
@@ -46,6 +47,7 @@ const AddToCartButton: React.FC<ButtonProps> = ({
       name={name}
       category={category}
       price={price}
+      incrementBtnRef={incrementBtnRef}
     />
   ) : (
     <button className="add-to-cart-btn is-not-clicked" onClick={startCount}>

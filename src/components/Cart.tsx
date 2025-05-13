@@ -60,9 +60,15 @@ const Cart = ({ onConfirmOrder }: CartProps) => {
                     }`}
                     alt="item remove icon"
                     role="button"
+                    tabIndex={0}
                     onClick={() => deleteItem(product.id)}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") {
+                        deleteItem(product.id);
+                      }
+                    }}
                   />
                 </article>
                 <hr></hr>
